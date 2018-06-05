@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Document</title>
+<style>
+body{
+	padding: 50px;
+}	
+a{
+	color: #00b7ff;
+}
+#content{
+	width:800px;
+	margin:0  auto; 
+}
+#room{
+	background: #ddd;
+	margin-bottom: 1em;
+}
+#msg{
+	width: 690px;
+	height: 300px;
+	overflow: auto;
+	background: #eee;
+	margin-bottom: 1em;
+	margin-left: 10px;
+}
+</style>
+</head>
+<body>
+<div id="content">
+	<div id="room">
+		<div id="room-list"></div>
+		<div id="msg"></div>
+		<form id="send-form">
+			<input type="text" id="send-msg">
+			<input id="send-btn" type="submit" value="Send"></input>
+			<div id="help">
+				Chat commands
+				<ul>
+					<li>Change nicknames<code>/nick {username}</code></li>
+					<li>join/create room:<code>/join {room name}</code></li>
+				</ul>
+			</div>
+		</form>
+	</div>
+</div>
+<script src="/socket.io/socket.io.js"></script>
+<script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>	
+</body>
+</html>

@@ -1,0 +1,13 @@
+var http = require('http');
+var server = http.createServer();
+
+server.on('request',(req,res)=>{
+	res.writeHead(200,{
+		'Content-Type':'text/plain'
+	});
+	res.end('hello world\n');
+})
+
+server.listen(4000);
+
+console.log('server running at http://localhost:4000/');
